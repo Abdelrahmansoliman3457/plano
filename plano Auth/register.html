@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="flag/build/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css"
+    />
+    <link rel="stylesheet" href="css/select2.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>register</title>
+  </head>
+  <body>
+    <div class="nav-layer"></div>
+    <!--start loader-->
+    <div class="loader">
+      <div class="logo-co-p">
+        <img src="imgs/g10.png" alt="" />
+      </div>
+      <div id="progressbar"></div>
+    </div>
+    <!--End loader-->
+    <!--start header-->
+    <section class="header">
+      <div class="container">
+        <div class="user-header" id="goheadspe">
+          <div class="logo">
+            <a href="index.html"><img src="imgs/g10.png" alt="logo" /></a>
+          </div>
+          <div class="flex-logins">
+            <ul class="user-ul">
+              <li><a href="#goheadspe">الرئيسية</a></li>
+              <li><a href="#gomain">من نحن</a></li>
+              <li><a href="#gospecial">مميزاتنا</a></li>
+              <li><a href="#gospecial">خطوات الطلب</a></li>
+              <li><a href="#gocontact">تواصل معنا</a></li>
+            </ul>
+          </div>
+          <div class="header-language">
+            <div class="logins">
+              <a class="main-btn up lg" href="login.html">تسجيل دخول مختبر</a>
+            </div>
+            <div class="d-flex align-items-center">
+              <img class="ml-2" src="imgs/saudi.png" alt="lang" />
+              <div class="drop-header">
+                عربي
+                <i class="fa-solid fa-chevron-down"></i>
+                <div class="drop-down-lang">
+                  <ul>
+                    <li><a href="#">عربي</a></li>
+                    <li><a href="#">انجليزي</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span class="coll-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end header-->
+
+    <!--start content-->
+    <div class="content">
+      <div class="register-main">
+        <div class="container">
+          <div class="col-lg-7 col-md-12 px-0 margin-auto">
+            <h5 class="text-center d-block">انشاء حساب جديد</h5>
+            <p class="text-center font13 gray-col mb-4">
+              من اجل تسجيل مصنعك يرجى ادخال البيانات التالية
+            </p>
+            <!--steps-->
+            <div class="card-white spe-pad small-card">
+              <div class="small-right">
+                <div class="felex-small">
+                  <div class="right-felex active">
+                    <div class="circle-spe step1">1</div>
+                    <div class="hide-check"><i class="fa-solid fa-check"></i></div>
+                    <div class="detail-spe">البيانات الاساسية</div>
+                  </div>
+                  <div class="left-felex"></div>
+                </div>
+              </div>
+              <div class="small-middle">
+                <div class="felex-small">
+                  <div
+                    class="right-felex color-hide tabs-m left-comp"
+                    data-show="complete-regester"
+                  >
+                    <div class="circle-spe">2</div>
+                    <div class="detail-spe">بيانات المتجر</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form action="complete-register.html">
+              <div class="card-reg-white mb-5">
+                <h6 class="card-reg-title">بيانات مدير النظام</h6>
+                <div class="inner-reg">
+                  <div class="flex-sm-bet mb-4">
+                    <div class="right-go-up">
+                      <img
+                        id="change-profile"
+                        src="imgs/Group 46059.png"
+                        alt=""
+                      />
+                      <label for="img-up" class="new-product-upload-spe">
+                        <input
+                          type="file"
+                          onchange="loadFiles(event)"
+                          type="file"
+                          id="img-up"
+                          accept="image/*"
+                          hidden
+                        />
+                        <i class="fa-solid fa-camera"></i>
+                      </label>
+                    </div>
+                    <div class="left-go-up">
+                      <div class="font_bold">الصورة الشخصية</div>
+                    </div>
+                  </div>
+                  <div class="main-input-cont mb-3 mt-4">
+                    <h6 class="mb-2 font14">الاسم الاول والاسم الاخير</h6>
+                    <input
+                      type="text"
+                      class="main-input"
+                      placeholder="برجاء ادخال الاسم الاول والاخير "
+                    />
+                  </div>
+
+                  <div class="main-input-cont mb-3 mt-4">
+                    <h6 class="mb-2 font14">البريد الالكتروني</h6>
+                    <input
+                      type="email"
+                      class="main-input"
+                      placeholder="برجاء ادخال البريد الالكتروني"
+                    />
+                  </div>
+                  <div class="main-input-cont mb-2 mt-4">
+                    <h6 class="mb-2 font14">كلمة المرور</h6>
+                    <input
+                      type="password"
+                      class="main-input inputPassSet"
+                      placeholder="برجاء ادخال كلمة المرور"
+                    />
+                    <div
+                      class="main-float gray-col pointer-click check-setting-ic"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                    </div>
+                  </div>
+                  <div class="main-input-cont mb-2 mt-4">
+                    <h6 class="mb-2 font14">تاكيد كلمة المرور</h6>
+                    <input
+                      type="password"
+                      class="main-input inputPassSet"
+                      placeholder="برجاء تاكيد كلمة المرور"
+                    />
+                    <div
+                      class="main-float gray-col pointer-click check-setting-ic"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                    </div>
+                  </div>
+                  <button type="submit" class="main-btn w-100 up mt-4">
+                    تاكيد
+                  </button>
+                  <div class="flex-group-me mt-3 mb-3">
+                    <div class="dont-have font14 gray-col">
+                      لديك حساب بالفعل؟ <a href="login.html">اضغط هنا</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end content-->
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="flag/build/js/intlTelInput.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn3NtsJ5lgHSIxUJ4AuqAMm2RXldDDjN8&libraries=places&language=ar"
+    ></script>
+    <script src="js/select2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+    <!-- PassWord Show and hide -->
+    <script>
+      const iconsPassSet = document.querySelectorAll(".check-setting-ic");
+
+      if (iconsPassSet) {
+        iconsPassSet.forEach((ic) => {
+          ic.addEventListener("click", function () {
+            let input = ic.parentElement.querySelector(".inputPassSet");
+            showPassword(input, ic);
+          });
+        });
+      }
+
+      // Function To Show And Hide Password
+      function showPassword(input, icon) {
+        if (input.type == "password") {
+          input.setAttribute("type", "text");
+          icon.innerHTML = `<i class="fa-regular fa-eye-slash"></i>`;
+        } else {
+          input.setAttribute("type", "password");
+          icon.innerHTML = `<i class="fa-regular fa-eye"></i>`;
+        }
+
+        // input.focus();
+      }
+    </script>
+    <!--change img profile-->
+    <script>
+      var loadFiles = function (event) {
+        var images = document.getElementById("change-profile");
+        images.src = URL.createObjectURL(event.target.files[0]);
+        images.classList.add("img-new-style");
+      };
+    </script>
+   
+  </body>
+</html>

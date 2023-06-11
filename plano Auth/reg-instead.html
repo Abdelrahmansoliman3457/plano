@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="flag/build/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/flat.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css"
+    />
+    <link rel="stylesheet" href="css/select2.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>register</title>
+  </head>
+  <body>
+    <div class="nav-layer"></div>
+    <!--start loader-->
+    <div class="loader">
+      <div class="logo-co-p">
+        <img src="imgs/g10.png" alt="" />
+      </div>
+      <div id="progressbar"></div>
+    </div>
+    <!--End loader-->
+    <!--start header-->
+    <section class="header">
+      <div class="container">
+        <div class="user-header" id="goheadspe">
+          <div class="logo">
+            <a href="index.html"><img src="imgs/g10.png" alt="logo" /></a>
+          </div>
+          <div class="flex-logins">
+            <ul class="user-ul">
+              <li><a href="#goheadspe">الرئيسية</a></li>
+              <li><a href="#gomain">من نحن</a></li>
+              <li><a href="#gospecial">مميزاتنا</a></li>
+              <li><a href="#gospecial">خطوات الطلب</a></li>
+              <li><a href="#gocontact">تواصل معنا</a></li>
+            </ul>
+          </div>
+          <div class="header-language">
+            <div class="logins">
+              <a class="main-btn up lg" href="login.html">تسجيل دخول مختبر</a>
+            </div>
+            <div class="d-flex align-items-center">
+              <img class="ml-2" src="imgs/saudi.png" alt="lang" />
+              <div class="drop-header">
+                عربي
+                <i class="fa-solid fa-chevron-down"></i>
+                <div class="drop-down-lang">
+                  <ul>
+                    <li><a href="#">عربي</a></li>
+                    <li><a href="#">انجليزي</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span class="coll-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end header-->
+
+    <!--start content-->
+    <div class="content">
+      <div class="register-main">
+        <div class="container">
+          <div class="col-lg-7 col-md-12 px-0 margin-auto">
+            <h5 class="text-center d-block">انشاء حساب جديد</h5>
+            <p class="text-center font13 gray-col mb-4">
+              من اجل تسجيل مصنعك يرجى ادخال البيانات التالية
+            </p>
+            <!--steps-->
+            <div class="card-white spe-pad small-card">
+              <div class="small-right">
+                <div class="felex-small">
+                  <div class="right-felex tabs-m" data-show="regester-mm">
+                    <div class="circle-spe step1">1</div>
+                    <div class="hide-check"><i class="fa-solid fa-check"></i></div>
+                    <div class="detail-spe">البيانات الاساسية</div>
+                  </div>
+                  <div class="left-felex"></div>
+                </div>
+              </div>
+              <div class="small-middle">
+                <div class="felex-small">
+                  <div
+                    class="right-felex color-hide tabs-m left-comp"
+                    data-show="complete-regester"
+                  >
+                    <div class="circle-spe">2</div>
+                    <div class="detail-spe">بيانات المصنع</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form action="success.html">
+              <div class="card-reg-white mb-5 tabs-show regester-mm">
+                <h6 class="card-reg-title">بيانات مدير النظام</h6>
+                <div class="inner-reg">
+                  <div class="flex-sm-bet mb-4">
+                    <div class="right-go-up">
+                      <img
+                        id="change-profile"
+                        src="imgs/Group 46059.png"
+                        alt=""
+                      />
+                      <label for="img-up" class="new-product-upload-spe">
+                        <input
+                          type="file"
+                          onchange="loadFiles(event)"
+                          type="file"
+                          id="img-up"
+                          accept="image/*"
+                          hidden
+                        />
+                        <i class="fa-solid fa-camera"></i>
+                      </label>
+                    </div>
+                    <div class="left-go-up">
+                      <div class="font_bold">الصورة الشخصية</div>
+                    </div>
+                  </div>
+                  <div class="main-input-cont mb-3 mt-4">
+                    <h6 class="mb-2 font14">اسم مدير النظام</h6>
+                    <input
+                      type="text"
+                      class="main-input"
+                      placeholder="برجاء ادخال اسم مدير النظام"
+                    />
+                  </div>
+                  <div class="main-input-cont mb-3 mt-4">
+                    <input type="text" id="number-country" hidden value="" />
+                    <h6 class="mb-2 font14">رقم الجوال</h6>
+                    <input
+                      type="tel"
+                      id="telephone"
+                      class="main-input"
+                      placeholder="برجاء ادخال رقم الجوال"
+                    />
+                  </div>
+                  <div class="main-input-cont mb-3 mt-4">
+                    <h6 class="mb-2 font14">البريد الالكتروني</h6>
+                    <input
+                      type="email"
+                      class="main-input"
+                      placeholder="برجاء ادخال البريد الالكتروني"
+                    />
+                  </div>
+                  <div class="main-input-cont mb-2 mt-4">
+                    <h6 class="mb-2 font14">كلمة المرور</h6>
+                    <input
+                      type="password"
+                      class="main-input inputPassSet"
+                      placeholder="برجاء ادخال كلمة المرور"
+                    />
+                    <div
+                      class="main-float gray-col pointer-click check-setting-ic"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                    </div>
+                  </div>
+                  <div class="main-input-cont mb-2 mt-4">
+                    <h6 class="mb-2 font14">تاكيد كلمة المرور</h6>
+                    <input
+                      type="password"
+                      class="main-input inputPassSet"
+                      placeholder="برجاء تاكيد كلمة المرور"
+                    />
+                    <div
+                      class="main-float gray-col pointer-click check-setting-ic"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                    </div>
+                  </div>
+                  <button type="button" class="main-btn w-100 up mt-4 tabs-m" data-show="complete-regester">
+                    تاكيد
+                  </button>
+                  <div class="flex-group-me mt-3 mb-3">
+                    <div class="dont-have font14 gray-col">
+                      لديك حساب بالفعل؟ <a href="index.html">اضغط هنا</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="complete-regester tabs-show">
+                <div class="card-reg-white mb-4">
+                  <h6 class="card-reg-title">بيانات المصنع</h6>
+                  <div class="inner-reg">
+                    <div class="flex-sm-bet mb-4">
+                      <div class="right-go-up">
+                        <img
+                          id="change-profile"
+                          src="imgs/Group 46059.png"
+                          alt=""
+                        />
+                        <label for="img-up" class="new-product-upload-spe">
+                          <input
+                            type="file"
+                            onchange="loadFiles(event)"
+                            type="file"
+                            id="img-up"
+                            accept="image/*"
+                            hidden
+                          />
+                          <i class="fa-solid fa-camera"></i>
+                        </label>
+                      </div>
+                      <div class="left-go-up">
+                        <div class="font_bold">صورة الشعار</div>
+                      </div>
+                    </div>
+                    <div class="main-input-cont mb-3">
+                      <h6 class="mb-2 font14">الاسم باللغة العربية</h6>
+                      <input
+                        type="text"
+                        class="main-input"
+                        placeholder="برجاء ادخال  الاسم باللغة العربية"
+                      />
+                    </div>
+                    <div class="main-input-cont mb-3">
+                      <h6 class="mb-2 font14">الاسم باللغة الانجليزية</h6>
+                      <input
+                        type="text"
+                        class="main-input"
+                        placeholder="برجاء ادخال  الاسم باللغة الانجليزية"
+                      />
+                    </div>
+                    <div class="main-input-cont mb-3">
+                      <h6 class="gray-col-dark font14">التصنيف</h6>
+                      <select
+                        class="main-select-multi"
+                        multiple="multiple"
+                        data-placeholder="اختر المهارة المطلوبة"
+                      >
+                        <option value="0">فنادق</option>
+                        <option value="1">مطاعم</option>
+                        <option value="2">ملاهي</option>
+                      </select>
+                      <div class="main-float gray-col">
+                        <i class="fa-solid fa-angle-down"></i>
+                      </div>
+                    </div>
+                    <div class="main-input-cont mb-3 mt-4">
+                      <input type="text" id="number-country" hidden value="" />
+                      <h6 class="mb-2 font14">رقم السجل التجاري</h6>
+                      <input
+                        type="number"
+                        class="main-input"
+                        placeholder="برجاء ادخال رقم السجل التجاري"
+                      />
+                    </div>
+                    <div class="main-input-cont mb-3 mt-4">
+                      <h6 class="mb-2 font14">صورة السجل التجاري</h6>
+                      <label for="filesNext_input" class="upload-main">
+                        <input
+                          type="file"
+                          multiple
+                          hidden
+                          id="filesNext_input"
+                          class="heddenUploud files-input"
+                          name="filesNext[]"
+                          data-input="filesNext"
+                          accept="image/*"
+                          value=""
+                        />
+                        <div class="label-text">
+                          الرجاء ارفاق صورة السجل التجاري
+                        </div>
+                        <div class="upload-ico">
+                          <i class="fa-solid fa-camera"></i>
+                        </div>
+                      </label>
+                      <div class="uploaded__area" id="filesNext_cont"></div>
+                    </div>
+                    <div class="main-input-cont mb-3 mt-4">
+                      <input type="text" id="number-country" hidden value="" />
+                      <h6 class="mb-2 font14">الرقم الضريبي</h6>
+                      <input
+                        type="number"
+                        class="main-input"
+                        placeholder="برجاء ادخال الرقم الضريبي الخاص بالموقع"
+                      />
+                    </div>
+                    <div class="main-input-cont mb-3">
+                      <h6 class="mb-2 font14">المدينة</h6>
+                      <select class="main-select">
+                        <option value="" selected disabled>
+                          برجاء ادخال المدينة
+                        </option>
+                        <option value="">مصر</option>
+                        <option value="">السعودية</option>
+                        <option value="">عمان</option>
+                      </select>
+                      <div class="main-float gray-col">
+                        <i class="fa-solid fa-angle-down"></i>
+                      </div>
+                    </div>
+                    <div class="main-input-cont mb-3 map-inp">
+                      <h6 class="mb-2 font14">العنوان</h6>
+                      <input
+                        type="text"
+                        class="main-input"
+                        name="address"
+                        readonly
+                        id="address"
+                        placeholder="يرجي تحديد العنوان علي الخريطة"
+                      />
+                      <div class="main-float gray-col map-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                      </div>
+                      <input type="hidden" name="lat" id="lat" value="30" />
+                      <input type="hidden" name="lng" id="lng" value="30" />
+                    </div>
+                    <div class="container-map">
+                      <div class="main-input-cont mb-3 sear-in">
+                        <input
+                          type="text"
+                          class="main-input"
+                          name="address2"
+                          id="address2"
+                          placeholder="ابحث هنا"
+                        />
+                      </div>
+                      <div
+                        id="map"
+                        class="mb-3"
+                        style="width: 100%; height: 300px"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-reg-white mb-4 card-times">
+                  <h6 class="card-reg-title">اوقات العمل</h6>
+                  <div class="inner-reg">
+                    <div class="time-go">
+                      <img src="imgs/noun_add_2596962.png" alt="" />
+                      <h6>لا توجد اوقات</h6>
+                      <div class="text-time gray-col">
+                        برجاء الضغط على ايقونة الاضافة لاضافة اوقات
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-reg-white mb-4 card-real-time">
+                  <h6 class="card-reg-title">اوقات العمل</h6>
+                  <div class="inner-reg newmobile">
+                    <div class="work-date-container mt-4">
+                      <div class="work-date-content">
+                        <div class="work-parent2 row g-0">
+                          <div class="work-date">
+                            <div class="row g-2 align-items-center mb-3">
+                              <div class="input-work col-6 col-md-4 mt-2 px-2">
+                                <div class="mb-2">اليوم</div>
+                                <div class="input-icon">
+                                  <select name="" id="" class="default_input">
+                                    <option value="">
+                                      السبت
+                                    </option>
+                                    <option value="">الأحد</option>
+                                    <option value="">الاثنين</option>
+                                    <option value="">الثلاثاء</option>
+                                    <option value="">الاربعاء</option>
+                                    <option value="">الخميس</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="input-work col-6 col-md-3 mt-2 px-2">
+                                <div class="mb-2">من</div>
+                                <input
+                                  type="text"
+                                  placeholder="الوقت من"
+                                  class="from-date"
+                                  id="time1"
+                                />
+                                <label class="add-photo top-def" for="time1">
+                                  <i class="fa-regular fa-clock"></i>
+                                </label>
+                              </div>
+                              <div class="input-work col-6 col-md-3 mt-2 px-2">
+                                <div class="mb-2">الى</div>
+                                <input
+                                  type="text"
+                                  placeholder="الوقت الى"
+                                  class="to-date"
+                                  id="time2"
+                                />
+                                <label class="add-photo top-def" for="time2">
+                                  <i class="fa-regular fa-clock"></i>
+                                </label>
+                              </div>
+                              <div class="col-md-2 mt-2 px-3">
+                                <div class="readonly mb-2">readonly</div>
+                                <div class="times-fales up">
+                                  <i class="fa-solid fa-plus"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-reg-white mb-4">
+                  <h6 class="card-reg-title">بيانات الحساب البنكي</h6>
+                  <div class="inner-reg">
+                    <div class="main-input-cont mb-3">
+                      <h6 class="mb-2 font14">اسم الحساب</h6>
+                      <input
+                        type="text"
+                        class="main-input"
+                        placeholder="برجاء ادخال اسم الحساب"
+                      />
+                    </div>
+                    <div class="main-input-cont mb-3">
+                      <h6 class="mb-2 font14">رقم الايبان</h6>
+                      <input
+                        type="number"
+                        class="main-input"
+                        placeholder="برجاء ادخال رقم الايبان"
+                      />
+                    </div>
+                    <button type="submit" class="main-btn w-100 up mt-4 mb-3">
+                      تاكيد
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end content-->
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="flag/build/js/intlTelInput.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn3NtsJ5lgHSIxUJ4AuqAMm2RXldDDjN8&libraries=places&language=ar"
+    ></script>
+    <script src="js/select2.js"></script>
+    <script src="js/flat.js"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <!--call iti-->
+    <script>
+      var input = document.querySelector("#telephone");
+      let iti = window.intlTelInput(input, {
+        autoPlaceholder: "ادخل",
+        customPlaceholder: "kggg",
+        initialCountry: "sa",
+        separateDialCode: true,
+      });
+
+      $("#number-country").val(iti.getSelectedCountryData().dialCode);
+
+      input.addEventListener("countrychange", function () {
+        $("#number-country").val(iti.getSelectedCountryData().dialCode);
+        console.log(iti.getSelectedCountryData().dialCode);
+      });
+    </script>
+    <!-- PassWord Show and hide -->
+    <script>
+      const iconsPassSet = document.querySelectorAll(".check-setting-ic");
+
+      if (iconsPassSet) {
+        iconsPassSet.forEach((ic) => {
+          ic.addEventListener("click", function () {
+            let input = ic.parentElement.querySelector(".inputPassSet");
+            showPassword(input, ic);
+          });
+        });
+      }
+
+      // Function To Show And Hide Password
+      function showPassword(input, icon) {
+        if (input.type == "password") {
+          input.setAttribute("type", "text");
+          icon.innerHTML = `<i class="fa-regular fa-eye-slash"></i>`;
+        } else {
+          input.setAttribute("type", "password");
+          icon.innerHTML = `<i class="fa-regular fa-eye"></i>`;
+        }
+
+        // input.focus();
+      }
+    </script>
+    <!--change img profile-->
+    <script>
+      var loadFiles = function (event) {
+        var images = document.getElementById("change-profile");
+        images.src = URL.createObjectURL(event.target.files[0]);
+        images.classList.add("img-new-style");
+      };
+    </script>
+    <!--call select2 multiple-->
+    <script>
+      $(document).ready(function () {
+        $(".main-select-multi").select2({
+          closeOnSelect: false,
+          placeholder: function () {
+            $(this).data("placeholder");
+          },
+          dir: "rtl",
+          //   allowClear: true,
+        });
+      });
+    </script>
+    <!------------abload files------------->
+    <script>
+      let inputsFiles = {};
+      $(".files-input").on("change", function (event) {
+        let input = $(this).data("input");
+        const selectedFilesCont = document.getElementById(input + "_cont");
+        if (!!inputsFiles[input]) {
+          let files = new DataTransfer();
+          for (let i = 0; i < event.target.files.length; i++) {
+            files.items.add(event.target.files[i]);
+          }
+          for (let i = 0; i < inputsFiles[input].length; i++) {
+            files.items.add(inputsFiles[input][i]);
+          }
+          inputsFiles[input] = files.files;
+          selectedFilesCont.innerHTML = "";
+        } else {
+          inputsFiles[input] = event.target.files;
+        }
+        if (!!inputsFiles[input] && inputsFiles[input].length > 0) {
+          if ($(this).data("single") == true) {
+            selectedFilesCont.innerHTML = "";
+            inputsFiles[input] = event.target.files;
+          }
+          for (let i = 0; i < inputsFiles[input].length; i++) {
+            const fileType = inputsFiles[input][i].type.split("/")[0];
+            if (fileType === "image") {
+              let src = URL.createObjectURL(inputsFiles[input][i]);
+              $("#" + input + "_cont").append(` <div class="file_">
+                                                                                <a data-fancybox="gallery" href="${src}">
+                                                                                    <img src="${src}" alt="">
+                                                                                </a>
+                                                                                <div class="remove_media" onclick="deleteFile(this ,'${inputsFiles[input][i].name}' ,'${input}')"><i class="fa-solid fa-xmark font13"></i></div>
+                                                                            </div>`);
+            } else if (fileType === "video") {
+              let src = URL.createObjectURL(inputsFiles[input][i]);
+
+              $("#" + input + "_cont").append(`<div class="file_">
+                                                                                <a data-fancybox="gallery" data-type="video" href="${src}">
+                                                                                    <video controls>
+                                                                                        <source src="${src}" type="video/mp4">
+                                                                                    </video>
+                                                                                    <div class="play-button"><i class="fas fa-play-circle"></i></div>
+                                                                                </a>
+                                                                                <div class="remove_media" onclick="deleteFile(this ,'${inputsFiles[input][i].name}' ,'${input}')"><i class="fa-solid fa-xmark font13"></i></div>
+                                                                            </div>`);
+            } else {
+              $("#" + input + "_cont").append(`<div class="file_">
+                                                                                <div class="docs_file">
+                                                                                    <div class="d-flex flex-column align-items-center justify-content-center h-100 p-2">
+                                                                                        <span class="font10">${inputsFiles[input][i].name}</span>
+                                                                                        <span><i class="far fa-file-pdf mr-1 ml-1"></i></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="remove_media" onclick="deleteFile(this ,'${inputsFiles[input][i].name}' ,'${input}')"><i class="fa-solid fa-xmark font13"></i></div>
+                                                                            </div>`);
+            }
+          }
+        }
+        event.target.files = inputsFiles[input];
+      });
+
+      function deleteFile(ele, name, input) {
+        let filesInput = document.getElementById(input + "_input");
+        let files = new DataTransfer();
+        let deleted = null;
+        for (let i = 0; i < filesInput.files.length; i++) {
+          if (filesInput.files[i].name == name && deleted != name) {
+            deleted = name;
+            continue;
+          }
+          files.items.add(filesInput.files[i]);
+        }
+        filesInput.files = files.files;
+        inputsFiles[input] = files.files;
+
+        // edit the number of parents to delete
+        $(ele).parent().remove();
+      }
+    </script>
+    <!--call select2 single-->
+    <script>
+      $(document).ready(function () {
+        $(".main-select").select2({
+          dropdownCssClass: "no-search",
+        });
+      });
+    </script>
+    <!--init map-->
+    <script>
+      var map;
+      var marker;
+      var lat = document.getElementById("lat");
+      var lng = document.getElementById("lng");
+      var address = document.getElementById("address");
+      var address2 = document.getElementById("address2");
+      var geocoder = new google.maps.Geocoder();
+      var infowindow = new google.maps.InfoWindow();
+
+      function initMap() {
+        var myLatlng = new google.maps.LatLng(lat.value, lng.value);
+        var mapOptions = {
+          zoom: 10,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+        };
+
+        map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        marker = new google.maps.Marker({
+          map: map,
+          position: myLatlng,
+          draggable: true,
+        });
+
+        geocoder.geocode({ latLng: myLatlng }, function (results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            if (results[0]) {
+              address.value = results[0].formatted_address;
+              lat.value = marker.getPosition().lat();
+              lng.value = marker.getPosition().lng();
+              infowindow.setContent(results[0].formatted_address);
+              infowindow.open(map, marker);
+            }
+          }
+        });
+
+        google.maps.event.addListener(marker, "dragend", function () {
+          geocoder.geocode(
+            { latLng: marker.getPosition() },
+            function (results, status) {
+              if (status == google.maps.GeocoderStatus.OK) {
+                if (results[0]) {
+                  address.value = results[0].formatted_address;
+                  lat.value = marker.getPosition().lat();
+                  lng.value = marker.getPosition().lng();
+                  infowindow.setContent(results[0].formatted_address);
+                  infowindow.open(map, marker);
+                }
+              }
+            }
+          );
+        });
+      }
+
+      function initialize() {
+        var input = document.getElementById("address2");
+        var autocomplete = new google.maps.places.Autocomplete(
+          /** @type {HTMLInputElement} */ (input),
+          {
+            types: ["(cities)"],
+          }
+        );
+        google.maps.event.addListener(
+          autocomplete,
+          "place_changed",
+          function () {
+            var place = autocomplete.getPlace();
+            if (!place.geometry) {
+              return;
+            }
+            lat.value = place.geometry.location.lat();
+            lng.value = place.geometry.location.lng();
+            // initMap();
+            var address = "";
+            if (place.address_components) {
+              address = [
+                (place.address_components[0] &&
+                  place.address_components[0].short_name) ||
+                  "",
+                (place.address_components[1] &&
+                  place.address_components[1].short_name) ||
+                  "",
+                (place.address_components[2] &&
+                  place.address_components[2].short_name) ||
+                  "",
+              ].join(" ");
+            }
+            initMap();
+          }
+        );
+      }
+
+      google.maps.event.addDomListener(window, "load", initialize);
+
+      google.maps.event.addDomListener(window, "load", initMap);
+
+      // show and hide map
+      let mapbtn = document.querySelector(".map-inp");
+      $(".container-map").hide();
+      mapbtn.addEventListener("click", function () {
+        $(".container-map").slideToggle();
+      });
+    </script>
+    <!-- Add Work Date -->
+    <script>
+      let plusBtn = document.querySelector(".times-fales");
+      // let workParent = document.querySelector(".work-parent");
+
+      plusBtn.addEventListener("click", function () {
+        let addit = `
+            <div class="row g-2 align-items-center mb-3 my-target-p">
+                              <div class="input-work col-6 col-md-4 mt-2 px-2">
+                                <div class="input-icon">
+                                  <select name="" id="" class="default_input">
+                                    <option value="" selected hidden>اليوم</option>
+                                    <option value="">الأحد</option>
+                                    <option value="">الاثنين</option>
+                                    <option value="">الثلاثاء</option>
+                                    <option value="">الاربعاء</option>
+                                    <option value="">الخميس</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="input-work col-6 col-md-3 mt-2 px-2">
+                                <input
+                                  type="text"
+                                  placeholder="الوقت من"
+                                  class="from-date"
+                                  id="time1"
+                                />
+                                <label class="add-photo" for="time1">
+                                  <i class="fa-regular fa-clock"></i>
+                                </label>
+                              </div>
+                              <div class="input-work col-6 col-md-3 mt-2 px-2">
+                                <input
+                                  type="text"
+                                  placeholder="الوقت الى"
+                                  class="to-date"
+                                  id="time2"
+                                />
+                                <label class="add-photo" for="time2">
+                                  <i class="fa-regular fa-clock"></i>
+                                </label>
+                              </div>
+                              <div class="col-md-2 mt-2"><div class="times-fales times-fales-spe up " onclick="deleteDate(this)"><i class="fa-solid fa-xmark"></i></div></div>
+                            </div>
+                 `;
+
+        $(".work-date").append(addit);
+        // Call flatpickr again after adding a new row
+        flatpickr(".from-date", {
+          disableMobile: "true",
+          enableTime: true,
+          noCalendar: true,
+          dateFormat: "H:i",
+        });
+        flatpickr(".to-date", {
+          disableMobile: "true",
+          enableTime: true,
+          noCalendar: true,
+          dateFormat: "H:i",
+        });
+      });
+
+      function deleteDate(el) {
+        el.closest(".my-target-p").remove();
+      }
+    </script>
+    <!-- Flat Picker -->
+    <script>
+      flatpickr(".from-date", {
+        disableMobile: "true",
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+      });
+      flatpickr(".to-date", {
+        disableMobile: "true",
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+      });
+    </script>
+    <!--add new time-->
+    <script>
+      let timesClick = document.querySelector(".time-go");
+      timesClick.addEventListener("click", function () {
+        $(".card-times").fadeOut();
+        $(".card-real-time").fadeIn();
+      });
+    </script>
+    <!-- Tabs -->
+    <script>
+      $(".tabs-show").hide();
+      getProFromLocal();
+
+      $(".tabs-m").on("click", function (e) {
+        e.preventDefault();
+
+        // FadeOut All Content
+        $(".tabs-show").fadeOut(0);
+        let item = $(this).attr("data-show");
+
+        // Show Current Content
+        $(`.${item}`).fadeIn();
+
+        // Active Class In Tabs
+        $(".tabs-m").removeClass("active");
+        $(this).addClass("active");
+
+        // Set Item
+        addLocal(item);
+
+        if (sessionStorage.getItem("activeTab") == '"complete-regester"') {
+          document.querySelector(".left-felex").classList.add("active");
+          document.querySelector(".right-felex").classList.add("active");
+          document.querySelector(".left-comp").classList.add("active");
+          document.querySelector(".hide-check").classList.add("active-show");
+          $(".step1").hide();
+        } else {
+          document.querySelector(".left-felex").classList.remove("active");
+          document.querySelector(".hide-check").classList.remove("active-show");
+          $(".step1").show();
+        }
+      });
+
+      window.onload = function () {
+        if (sessionStorage.getItem("activeTab") == '"complete-regester"') {
+          document.querySelector(".left-felex").classList.add("active");
+          document.querySelector(".right-felex").classList.add("active");
+          document.querySelector(".hide-check").classList.add("active-show");
+          $(".step1").hide();
+          
+        } else {
+          document.querySelector(".left-felex").classList.remove("active");
+          document.querySelector(".hide-check").classList.remove("active-show");
+          $(".step1").show();
+        }
+      };
+
+      // Add activeTab To Local storage
+      function addLocal(tab) {
+        sessionStorage.setItem("activeTab", JSON.stringify(tab));
+      }
+
+      // Get activeTab From Local Storage
+      function getProFromLocal() {
+        let data = sessionStorage.getItem("activeTab");
+
+        // Check if Theres activeTab In Local Storage
+        if (data) {
+          activeTab = JSON.parse(data);
+          $(`.${activeTab}`).fadeIn();
+          $(".tabs-m").removeClass("active");
+          $(`[data-show=${activeTab}]`).addClass("active");
+        } else {
+          $(".regester-mm").fadeIn(0);
+          $(`[data-show=regester-mm]`).addClass("active");
+        }
+      }
+    </script>
+  </body>
+</html>

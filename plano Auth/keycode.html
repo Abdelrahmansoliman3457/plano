@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="flag/build/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>forgget password</title>
+  </head>
+  <body>
+    <div class="nav-layer"></div>
+    <!--start loader-->
+    <div class="loader">
+      <div class="logo-co-p">
+        <img src="imgs/g10.png" alt="" />
+      </div>
+      <div id="progressbar"></div>
+    </div>
+    <!--End loader-->
+    <!--start header-->
+    <section class="header">
+      <div class="container">
+        <div class="user-header" id="goheadspe">
+          <div class="logo">
+            <a href="index.html"><img src="imgs/g10.png" alt="logo" /></a>
+          </div>
+          <div class="flex-logins">
+            <ul class="user-ul">
+              <li><a href="#goheadspe">الرئيسية</a></li>
+              <li><a href="#gomain">من نحن</a></li>
+              <li><a href="#gospecial">مميزاتنا</a></li>
+              <li><a href="#gospecial">خطوات الطلب</a></li>
+              <li><a href="#gocontact">تواصل معنا</a></li>
+            </ul>
+          </div>
+          <div class="header-language">
+            <div class="logins">
+              <a class="main-btn up lg" href="login.html">تسجيل دخول مختبر</a>
+            </div>
+            <div class="d-flex align-items-center">
+              <img class="ml-2" src="imgs/saudi.png" alt="lang" />
+              <div class="drop-header">
+                عربي
+                <i class="fa-solid fa-chevron-down"></i>
+                <div class="drop-down-lang">
+                  <ul>
+                    <li><a href="#">عربي</a></li>
+                    <li><a href="#">انجليزي</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span class="coll-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end header-->
+
+    <!--start content-->
+    <div class="content">
+      <div class="register-main">
+        <div class="container">
+          <form action="restore-pass.html">
+            <div class="col-lg-7 col-md-12 px-0 margin-auto">
+              <h4 class="text-center">استعادة كلمة المرور</h4>
+              <p class="gray-col font14 text-center">
+                برجاء ادخال كود التحقق المرسل اليك عبر رقم الجوال
+              </p>
+              <div class="card-reg-white mb-4">
+                <h6 class="card-reg-title">كود التحقق</h6>
+                <div class="inner-reg">
+                  <div class="flex-group-me">
+                    <img class="key-codeimg" src="imgs/code.png" alt="" />
+                  </div>
+                  <div class="code-container">
+                    <input id="key-code" hidden type="text" value="" />
+                    <input
+                      type="number"
+                      class="code"
+                      min="0"
+                      max="9"
+                      required
+                    />
+                    <input
+                      type="number"
+                      class="code"
+                      min="0"
+                      max="9"
+                      required
+                    />
+                    <input
+                      type="number"
+                      class="code"
+                      min="0"
+                      max="9"
+                      required
+                    />
+                    <input
+                      type="number"
+                      class="code"
+                      min="0"
+                      max="9"
+                      required
+                    />
+                  </div>
+                  <div class="flex-group-me gap-30">
+                    <div class="dont-have font14 gray-col">
+                      لم تستلم الكود بعد؟
+                      <button
+                        type="button"
+                        id="js-startTimer"
+                        data-time="0:30"
+                        href="register.html"
+                      >
+                        اعد ارسال الكود
+                      </button>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="main-btn w-100 up mt-4 mb-3 key-ajax"
+                  >
+                    تاكيد
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--end content-->
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="flag/build/js/intlTelInput.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <!--get key code-->
+    <script>
+      $(document).ready(function () {
+        let codes = document.querySelectorAll(".code");
+
+        $(".code-container .code").first().focus();
+
+        codes.forEach((code, idx) => {
+          code.addEventListener("keydown", (e) => {
+            if (e.key >= 0 && e.key <= 9) {
+              codes[idx].value = "";
+              if ([idx + 1] < codes.length) {
+                setTimeout(() => codes[idx + 1].focus(), 10);
+              }
+            } else if (e.key === "Backspace") {
+              setTimeout(() => codes[idx - 1].focus(), 10);
+            }
+          });
+        });
+        // add key code value to  hidden input
+        let HiddenInp = document.querySelector("#key-code");
+        let AjaxBtn = document.querySelector(".key-ajax");
+        let inpArray = [];
+        AjaxBtn.addEventListener("click", function () {
+          for (let i = 0; i < codes.length; i++) {
+            inpArray.push(codes[i].value);
+          }
+          let inpValReal = inpArray.join("");
+          HiddenInp.value = inpValReal;
+          inpArray = [];
+        });
+      });
+    </script>
+  </body>
+</html>

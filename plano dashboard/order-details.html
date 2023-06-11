@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="flag/build/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/select2.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>order details</title>
+  </head>
+  <body>
+    <div class="nav-layer"></div>
+    <!--start loader-->
+    <div class="loader">
+      <div class="logo-co-p">
+        <img src="imgs/Group 96420.png" alt="" />
+      </div>
+      <div id="progressbar"></div>
+    </div>
+    <!--End loader-->
+
+    <div class="sidebar" id="sidebar">
+      <div class="close" id="closeSidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="content">
+        <div class="flex-sm-gap spe-lo-pad mb-4">
+          <div class="logo">
+            <img src="imgs/Group 96420.png" alt="" />
+          </div>
+          <div class="left-logo">
+            <h6>جهز</h6>
+            <p class="gray-col font14">لوحة تحكم المصنع</p>
+          </div>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="index.html">
+              <span class="icon-co">
+                <img src="imgs/noun_dashboard_3595546.png" alt="" />
+              </span>
+              الرئيسية
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="products.html" class="coll-open">
+              <span class="icon-co">
+                <img src="imgs/home.png" alt="" />
+              </span>
+              منتجاتي
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <div class="item-click mb-2">
+              <span class="icon-co">
+                <img src="imgs/noun_list.png" alt="" />
+              </span>
+              طلباتي
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </div>
+            <div class="orders-show collapse-my">
+              <a href="new-orders.html" class="flex-v-sm mb-2">
+                <div class="right-vsm">
+                  <img src="imgs/a.png" alt="" />
+                  <div class="vsm-name">الطلبات الجديدة</div>
+                </div>
+                <div class="right-vsm font14">
+                  <i class="fa-solid fa-angle-left"></i>
+                </div>
+              </a>
+              <a href="current-orders.html" class="flex-v-sm mb-2">
+                <div class="right-vsm">
+                  <img src="imgs/Group 45937.png" alt="" />
+                  <div class="vsm-name">الطلبات النشطة</div>
+                </div>
+                <div class="right-vsm font14">
+                  <i class="fa-solid fa-angle-left"></i>
+                </div>
+              </a>
+              <a href="current-orders.html" class="flex-v-sm mb-2">
+                <div class="right-vsm">
+                  <img src="imgs/Group 97818.png" alt="" />
+                  <div class="vsm-name">الطلبات تحت المعالجة</div>
+                </div>
+                <div class="right-vsm font14">
+                  <i class="fa-solid fa-angle-left"></i>
+                </div>
+              </a>
+              <a href="current-orders.html" class="flex-v-sm mb-2">
+                <div class="right-vsm">
+                  <img src="imgs/b.png" alt="" />
+                  <div class="vsm-name">الطلبات المكتملة</div>
+                </div>
+                <div class="right-vsm font14">
+                  <i class="fa-solid fa-angle-left"></i>
+                </div>
+              </a>
+              <a href="current-orders.html" class="flex-v-sm mb-2">
+                <div class="right-vsm">
+                  <img src="imgs/Group 97820.png" alt="" />
+                  <div class="vsm-name">الطلبات الملغية</div>
+                </div>
+                <div class="right-vsm font14">
+                  <i class="fa-solid fa-angle-left"></i>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a href="wallet.html">
+              <span class="icon-co">
+                <img src="imgs/16-Money Bill.png" alt="" />
+              </span>
+              المالية
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <div class="item-click mb-2">
+              <span class="icon-co">
+                <img src="imgs/setting.png" alt="" />
+              </span>
+              الاعدادات
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </div>
+            <div class="setting-show collapse-my">
+              <a href="profile.html" class="flex-v-sm mb-2">
+                <div class="right-vsm">
+                  <img src="imgs/a.png" alt="" />
+                  <div class="vsm-name">الملف الشخصي</div>
+                </div>
+                <div class="right-vsm font14">
+                  <i class="fa-solid fa-angle-left"></i>
+                </div>
+              </a>
+              <a href="factory.html" class="flex-v-sm mb-2">
+                <div class="right-vsm">
+                  <img src="imgs/Group 45937.png" alt="" />
+                  <div class="vsm-name">بيانات المصنع</div>
+                </div>
+                <div class="right-vsm font14">
+                  <i class="fa-solid fa-angle-left"></i>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a href="contact-us.html">
+              <span class="icon-co">
+                <img src="imgs/contact.png" alt="" />
+              </span>
+              تواصل معنا
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://abdelrahmansoliman3457.github.io/auth-site-gahez/?fbclid=IwAR1URvPU0fEfVZItnr0lBwVeMgTwVCO2hdKN13U8MBeybTs9loCy3rmDmYU"
+              class="log-out-red"
+            >
+              <span class="icon-co">
+                <img src="imgs/noun_logout.png" alt="" />
+              </span>
+              تسجيل الخروج
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <div class="foot-spe mb-2">
+            <div class="top-t mb-1">جميع الحقوق محفوظة @2022</div>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <nav class="navbar-me" id="navbar">
+      <div class="container">
+        <div class="content">
+          <div class="menu" id="menu">
+            <img src="imgs/noun_List_2946302.png" alt="" />
+          </div>
+          <form action="" class="search-form">
+            <div class="middle-form relative-parent search-main">
+              <input
+                type="text"
+                placeholder="كلمات مفتاحية"
+                class="main-input"
+              />
+              <ul class="my-drop-search">
+                <li>
+                  <a href="user-info.html" class="between-divs">
+                    <div class="flex-in-drop">
+                      <img
+                        class="search-img-sm"
+                        src="imgs/185644495_1667380803456791_1968050560740665054_n.jpg"
+                        alt=""
+                      />
+                      <div class="in-f-text">اسم الطلب</div>
+                    </div>
+                    <div class="num-or">#67675</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="user-info.html" class="between-divs">
+                    <div class="flex-in-drop">
+                      <img
+                        class="search-img-sm"
+                        src="imgs/185644495_1667380803456791_1968050560740665054_n.jpg"
+                        alt=""
+                      />
+                      <div class="in-f-text">اسم الطلب</div>
+                    </div>
+                    <div class="num-or">#67675</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="user-info.html" class="between-divs">
+                    <div class="flex-in-drop">
+                      <img
+                        class="search-img-sm"
+                        src="imgs/185644495_1667380803456791_1968050560740665054_n.jpg"
+                        alt=""
+                      />
+                      <div class="in-f-text">اسم الطلب</div>
+                    </div>
+                    <div class="num-or">#67675</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="user-info.html" class="between-divs">
+                    <div class="flex-in-drop">
+                      <img
+                        class="search-img-sm"
+                        src="imgs/185644495_1667380803456791_1968050560740665054_n.jpg"
+                        alt=""
+                      />
+                      <div class="in-f-text">اسم الطلب</div>
+                    </div>
+                    <div class="num-or">#67675</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="user-info.html" class="between-divs">
+                    <div class="flex-in-drop">
+                      <img
+                        class="search-img-sm"
+                        src="imgs/185644495_1667380803456791_1968050560740665054_n.jpg"
+                        alt=""
+                      />
+                      <div class="in-f-text">اسم الطلب</div>
+                    </div>
+                    <div class="num-or">#67675</div>
+                  </a>
+                </li>
+              </ul>
+              <button type="submit" class="fl-bt">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </form>
+          <div class="left">
+            <div class="not search-mmain">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="not">
+              <a href="notifications.html"></a>
+              <i class="fa-regular fa-bell"></i>
+              <span class="number">3</span>
+            </div>
+
+            <a href="profile.html">
+              <div class="account">
+                <img
+                  src="imgs/185644495_1667380803456791_1968050560740665054_n.jpg"
+                  alt=""
+                />
+                <div class="info">
+                  <h3>عبدالرحمن</h3>
+                  <span>المدير العام</span>
+                </div>
+              </div>
+            </a>
+            <div class="header-language">
+              <img src="imgs/saudi.png" alt="lang" />
+              <div class="drop-header">
+                عربي
+                <i class="fa-solid fa-chevron-down font12"></i>
+                <div class="drop-down-lang">
+                  <ul>
+                    <li><a href="#">عربي</a></li>
+                    <li><a href="#">انجليزي</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-sec" id="main">
+      <div class="container">
+        <div class="side-heading">
+          <h6>تفاصيل الطلب</h6>
+          <div class="links-top-to font14">
+            <a class="gray-col" href="profile.html">الطلبات</a> /
+            <a class="gray-col" href="profile.html">الطلبات الجديدة</a> /
+            <span class="color-main">تفاصيل الطلب</span>
+          </div>
+        </div>
+        <!--steps-->
+        <!-- add active class to div with class "right-felex" to make it active -->
+        <!-- add active class to div with class "left-felex" to make it active -->
+        <div class="card-white spe-pad small-card">
+          <div class="small-right">
+            <div class="felex-small">
+              <div class="right-felex active">
+                <div class="circle-spe">1</div>
+                <div class="detail-spe">قيد الموافقة</div>
+              </div>
+              <div class="left-felex"></div>
+            </div>
+          </div>
+          <div class="small-middle">
+            <div class="felex-small">
+              <div class="right-felex">
+                <div class="circle-spe">2</div>
+                <div class="detail-spe">تم تجهيز الطلب</div>
+              </div>
+              <div class="left-felex"></div>
+            </div>
+          </div>
+          <div class="small-middle">
+            <div class="felex-small">
+              <div class="right-felex">
+                <div class="circle-spe">3</div>
+                <div class="detail-spe">تم التسليم الى جهز</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-white-dash">
+          <h6 class="head-dash font-bold mb-0">بيانات الطلب</h6>
+          <div class="all-info">
+            <div class="row-main-loop">
+              <div class="right-wid gray-col">رقم الطلب</div>
+              <div class="left-wid">#35353</div>
+            </div>
+            <div class="row-main-loop">
+              <div class="right-wid gray-col">تاريخ الطلب</div>
+              <div class="left-wid">22/2/2004</div>
+            </div>
+            <div class="row-main-loop">
+              <div class="right-wid gray-col">عنوان التوصيل</div>
+              <div class="left-wid location-main">
+                <i class="fa-solid fa-paper-plane"></i>
+                الرياض , السعودية
+              </div>
+            </div>
+            <div class="row-main-loop">
+              <div class="right-wid gray-col">تاريخ الحجز</div>
+              <div class="left-wid">22/2/2004</div>
+            </div>
+            <div class="row-main-loop">
+              <div class="right-wid gray-col">وقت الحدث</div>
+              <div class="left-wid">2 مساءا</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-white-dash">
+          <h6 class="head-dash font-bold mb-0">بيانات الطلب</h6>
+          <div class="all-info">
+            <div class="row-main-loop">
+              <div class="right-wid gray-col">قيمة الطلب</div>
+              <div class="left-wid">54 ريال</div>
+            </div>
+            <div class="row-main-loop">
+              <div class="right-wid gray-col">القيمة المضافة</div>
+              <div class="left-wid">50 ريال</div>
+            </div>
+            <div class="row-main-loop price-m">
+              <div class="right-wid">المجموع الكلي</div>
+              <div class="left-wid">3424 ريال</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-white-dash">
+          <h6 class="head-dash font-bold mb-0">ملاحظات</h6>
+          <p class="notify gray-col mb-3">
+            لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو
+            أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيو لوريم
+            ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو
+            أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيو لوريم
+            ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو
+            أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيو
+          </p>
+        </div>
+        <div class="card-white-dash">
+          <h6 class="head-dash font-bold mb-0">معلومات العميل</h6>
+          <div class="flex-bet-loop">
+            <div class="flex-sm-gap">
+              <img
+                src="imgs/185644495_1667380803456791_1968050560740665054_n.jpg"
+                class="img-pr"
+                alt=""
+              />
+              <div>
+                <div class="pr-name mb-2">عبدالرحمن</div>
+                <a href="tel:01097054537" class="flex-phone">
+                  <div class="phone-ic"><i class="fa-solid fa-phone"></i></div>
+                  <div class="phone-te">01097054537</div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="flex-sm-gap">
+          <button
+            class="main-btn up bg-green lg"
+            data-toggle="modal"
+            data-target="#staticBackdrop"
+          >
+            قبول الطلب بالكامل
+          </button>
+          <button
+            class="main-btn up bg-red lg"
+            data-toggle="modal"
+            data-target="#refuse"
+          >
+            رفض الطلب
+          </button>
+          <!-- <button class="main-btn up lg"> تم التسليم للمندوب </button> -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal success -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      tabindex="-1"
+      aria-labelledby="staticBackdrop2Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content main-redious">
+          <div class="modal-body maodal-pad text-center">
+            <div class="flex-group-me mb-4 mt-3">
+              <img class="modal-img-m" src="imgs/check.png" alt="" />
+            </div>
+            <h5 class="text-center mb-4 font-bold">تم قبول الطلب بنجاح</h5>
+            <div class="flex-group-me mb-3">
+              <a href="order-details" class="main-btn up wid-75"
+                >تفاصيل الطلب</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal refuse -->
+    <div
+      class="modal fade"
+      id="refuse"
+      tabindex="-1"
+      aria-labelledby="staticBackdrop2Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content main-redious">
+          <div class="modal-body maodal-pad text-center">
+            <div class="flex-group-me mb-4 mt-3">
+              <img class="modal-img-m" src="imgs/check.png" alt="" />
+            </div>
+            <h5 class="text-center mb-4 font-bold">تم رفض الطلب بنجاح</h5>
+            <div class="flex-group-me mb-3">
+              <a href="order-details" class="main-btn up wid-75"
+                >تفاصيل الطلب</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="flag/build/js/intlTelInput.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn3NtsJ5lgHSIxUJ4AuqAMm2RXldDDjN8&libraries=places&language=ar"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script src="js/alerts.js"></script>
+
+    <script src="js/main.js"></script>
+    <!--call rateYo for rating-->
+    <script>
+      $(function () {
+        $(".rateYo").rateYo({
+          starWidth: "16px",
+          normalFill: "#A0A0A0",
+          ratedFill: "#eaf200",
+          spacing: "8px",
+          halfStar: true,
+          rtl: true,
+          readOnly: true,
+          starSvg: `<svg height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                  viewBox="0 0 47.94 47.94" xml:space="preserve">
+                                  <path d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757
+                                  c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042
+                                  c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685
+                                  c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528
+                                  c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956
+                                  C22.602,0.567,25.338,0.567,26.285,2.486z"/>
+                      </svg>`,
+        });
+      });
+    </script>
+    <!--counter cart-->
+    <script>
+      $(document).ready(function () {
+        $(".count").prop("disabled", true);
+        $(document).on("click", ".plus", function () {
+          var count = $(this).closest(".qty").find(".count");
+          $(count).val(parseInt($(count).val()) + 1);
+        });
+        $(document).on("click", ".minus", function () {
+          var count = $(this).closest(".qty").find(".count");
+          $(count).val(parseInt($(count).val()) - 1);
+          if ($(count).val() == 0) {
+            $(count).val(1);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
